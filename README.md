@@ -10,3 +10,6 @@ Some amounts of ram that are acceptable are
 "4g"
 "3g"
 I reccomend 3g as that is a good compromise in how mcuh you actually need and not using more than your computer can handle.
+ 
+
+ Download https://www.azul.com/downloads/zulu-community/?version=java-11-lts&os=macos&architecture=arm-64-bit&package=jdk and name it zulu-11.jdk
