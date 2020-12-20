@@ -1,11 +1,11 @@
 This is work from a youtuber. If you want to find the original person who created this search up "youtube no rossetta minecraft"
 I haved edited this so you can launch minecraft without having a legal minecraft account.
-If you have a legal account type this into your terminal while at this folder
+If you have a legal account type this into your terminal while at this folder \n
 sh launch.sh "email" "password" "username" "amount of ram"
-If you dont have a legal account type in this
+If you dont have a legal account type in this \n
 sh launch.sh "a" "a" "username" "amount of ram"
 
-Some amounts of ram that are acceptable are
+Some amounts of ram that are acceptable are \n
 "2g"
 "4g"
 "3g"
