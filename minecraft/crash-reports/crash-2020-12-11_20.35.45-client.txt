@@ -1,0 +1,85 @@
+---- Minecraft Crash Report ----
+// I just don't know what went wrong :(
+
+Time: 12/11/20, 8:35 PM
+Description: Initializing game
+
+java.lang.ExceptionInInitializerError
+	at dkd.<init>(SourceFile:146)
+	at djz.<init>(SourceFile:440)
+	at net.minecraft.client.main.Main.main(SourceFile:177)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.multimc.onesix.OneSixLauncher.launchWithMainClass(OneSixLauncher.java:196)
+	at org.multimc.onesix.OneSixLauncher.launch(OneSixLauncher.java:231)
+	at org.multimc.EntryPoint.listen(EntryPoint.java:143)
+	at org.multimc.EntryPoint.main(EntryPoint.java:34)
+Caused by: java.lang.RuntimeException: java.lang.UnsatisfiedLinkError: Failed to dynamically load library: /Users/shoryamalani/Downloads/MCAppleSilicon/lwjglnatives/libglfw.dylib(error = null)
+	at deo.<clinit>(SourceFile:46)
+	... 11 more
+Caused by: java.lang.UnsatisfiedLinkError: Failed to dynamically load library: /Users/shoryamalani/Downloads/MCAppleSilicon/lwjglnatives/libglfw.dylib(error = null)
+	at org.lwjgl.system.macosx.MacOSXLibraryDL.loadLibrary(MacOSXLibraryDL.java:32)
+	at org.lwjgl.system.macosx.MacOSXLibraryDL.<init>(MacOSXLibraryDL.java:19)
+	at org.lwjgl.system.macosx.MacOSXLibrary.create(MacOSXLibrary.java:28)
+	at org.lwjgl.system.APIUtil.apiCreateLibrary(APIUtil.java:125)
+	at org.lwjgl.system.Library.loadNative(Library.java:360)
+	at org.lwjgl.system.Library.loadNativeFromLibraryPath(Library.java:349)
+	at org.lwjgl.system.Library.loadNative(Library.java:243)
+	at org.lwjgl.system.Library.loadNative(Library.java:222)
+	at org.lwjgl.glfw.GLFW.<clinit>(GLFW.java:674)
+	at java.base/jdk.internal.misc.Unsafe.ensureClassInitialized0(Native Method)
+	at java.base/jdk.internal.misc.Unsafe.ensureClassInitialized(Unsafe.java:1042)
+	at java.base/java.lang.invoke.DirectMethodHandle$EnsureInitialized.computeValue(DirectMethodHandle.java:357)
+	at java.base/java.lang.invoke.DirectMethodHandle$EnsureInitialized.computeValue(DirectMethodHandle.java:354)
+	at java.base/java.lang.ClassValue.getFromHashMap(ClassValue.java:226)
+	at java.base/java.lang.ClassValue.getFromBackup(ClassValue.java:208)
+	at java.base/java.lang.ClassValue.get(ClassValue.java:114)
+	at java.base/java.lang.invoke.DirectMethodHandle.checkInitialized(DirectMethodHandle.java:378)
+	at java.base/java.lang.invoke.DirectMethodHandle.ensureInitialized(DirectMethodHandle.java:368)
+	at java.base/java.lang.invoke.DirectMethodHandle.ensureInitialized(DirectMethodHandle.java:400)
+	at deo.<clinit>(SourceFile:43)
+	... 11 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at dkd.<init>(SourceFile:146)
+	at djz.<init>(SourceFile:440)
+
+-- Initialization --
+Details:
+Stacktrace:
+	at net.minecraft.client.main.Main.main(SourceFile:177)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.multimc.onesix.OneSixLauncher.launchWithMainClass(OneSixLauncher.java:196)
+	at org.multimc.onesix.OneSixLauncher.launch(OneSixLauncher.java:231)
+	at org.multimc.EntryPoint.listen(EntryPoint.java:143)
+	at org.multimc.EntryPoint.main(EntryPoint.java:34)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.4
+	Minecraft Version ID: 1.16.4
+	Operating System: Mac OS X (aarch64) version 11.0.1
+	Java Version: 11.0.9.1, Azul Systems, Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Azul Systems, Inc.
+	Memory: 622560328 bytes (593 MB) / 1113587712 bytes (1062 MB) up to 2147483648 bytes (2048 MB)
+	CPUs: 8
+	JVM Flags: 2 total; -Xms409m -Xmx2048m
+	Launched Version: MultiMC5
+	Backend library: LWJGL version 3.2.3 SNAPSHOT
+	Backend API: ~~ERROR~~ NoClassDefFoundError: Could not initialize class org.lwjgl.glfw.GLFW
+	GL Caps: 
+	Using VBOs: Yes
+	Is Modded: Probably not. Jar signature remains and client brand is untouched.
+	Type: Client (map_client.txt)
+	CPU: <unknown>

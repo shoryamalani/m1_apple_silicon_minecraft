@@ -1,0 +1,85 @@
+---- Minecraft Crash Report ----
+// Don't be sad, have a hug! <3
+
+Time: 12/11/20, 8:45 PM
+Description: Initializing game
+
+java.lang.UnsatisfiedLinkError: /Users/shoryamalani/Downloads/MCAppleSilicon/lwjglnatives/liblwjgl_opengl.dylib: dlopen(/Users/shoryamalani/Downloads/MCAppleSilicon/lwjglnatives/liblwjgl_opengl.dylib, 1): no suitable image found.  Did find:
+	/Users/shoryamalani/Downloads/MCAppleSilicon/lwjglnatives/liblwjgl_opengl.dylib: code signature in (/Users/shoryamalani/Downloads/MCAppleSilicon/lwjglnatives/liblwjgl_opengl.dylib) not valid for use in process using Library Validation: library load disallowed by system policy
+	at java.base/java.lang.ClassLoader$NativeLibrary.load0(Native Method)
+	at java.base/java.lang.ClassLoader$NativeLibrary.load(ClassLoader.java:2442)
+	at java.base/java.lang.ClassLoader$NativeLibrary.loadLibrary(ClassLoader.java:2498)
+	at java.base/java.lang.ClassLoader.loadLibrary0(ClassLoader.java:2694)
+	at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2627)
+	at java.base/java.lang.Runtime.load0(Runtime.java:768)
+	at java.base/java.lang.System.load(System.java:1837)
+	at org.lwjgl.system.Library.loadSystem(Library.java:177)
+	at org.lwjgl.system.Library.loadSystemFromLibraryPath(Library.java:167)
+	at org.lwjgl.system.Library.loadSystem(Library.java:103)
+	at org.lwjgl.opengl.GL.<clinit>(GL.java:78)
+	at dez.<init>(SourceFile:106)
+	at eau.a(SourceFile:21)
+	at djz.<init>(SourceFile:461)
+	at net.minecraft.client.main.Main.main(SourceFile:177)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.multimc.onesix.OneSixLauncher.launchWithMainClass(OneSixLauncher.java:196)
+	at org.multimc.onesix.OneSixLauncher.launch(OneSixLauncher.java:231)
+	at org.multimc.EntryPoint.listen(EntryPoint.java:143)
+	at org.multimc.EntryPoint.main(EntryPoint.java:34)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at java.base/java.lang.ClassLoader$NativeLibrary.load0(Native Method)
+	at java.base/java.lang.ClassLoader$NativeLibrary.load(ClassLoader.java:2442)
+	at java.base/java.lang.ClassLoader$NativeLibrary.loadLibrary(ClassLoader.java:2498)
+	at java.base/java.lang.ClassLoader.loadLibrary0(ClassLoader.java:2694)
+	at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2627)
+	at java.base/java.lang.Runtime.load0(Runtime.java:768)
+	at java.base/java.lang.System.load(System.java:1837)
+	at org.lwjgl.system.Library.loadSystem(Library.java:177)
+	at org.lwjgl.system.Library.loadSystemFromLibraryPath(Library.java:167)
+	at org.lwjgl.system.Library.loadSystem(Library.java:103)
+	at org.lwjgl.opengl.GL.<clinit>(GL.java:78)
+	at dez.<init>(SourceFile:106)
+	at eau.a(SourceFile:21)
+	at djz.<init>(SourceFile:461)
+
+-- Initialization --
+Details:
+Stacktrace:
+	at net.minecraft.client.main.Main.main(SourceFile:177)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.multimc.onesix.OneSixLauncher.launchWithMainClass(OneSixLauncher.java:196)
+	at org.multimc.onesix.OneSixLauncher.launch(OneSixLauncher.java:231)
+	at org.multimc.EntryPoint.listen(EntryPoint.java:143)
+	at org.multimc.EntryPoint.main(EntryPoint.java:34)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.4
+	Minecraft Version ID: 1.16.4
+	Operating System: Mac OS X (aarch64) version 11.0.1
+	Java Version: 11.0.9.1, Azul Systems, Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Azul Systems, Inc.
+	Memory: 571141120 bytes (544 MB) / 1024458752 bytes (977 MB) up to 2147483648 bytes (2048 MB)
+	CPUs: 8
+	JVM Flags: 2 total; -Xms409m -Xmx2048m
+	Launched Version: MultiMC5
+	Backend library: LWJGL version 3.2.3 SNAPSHOT
+	Backend API: ~~ERROR~~ NoClassDefFoundError: Could not initialize class org.lwjgl.opengl.GL
+	GL Caps: 
+	Using VBOs: Yes
+	Is Modded: Probably not. Jar signature remains and client brand is untouched.
+	Type: Client (map_client.txt)
+	CPU: <unknown>
